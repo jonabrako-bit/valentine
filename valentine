@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Be My Valentine 🤨</title>
+  <style>
+    body {
+        margin: 0;
+      height: 100vh;
+      background-color: pink;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    img {
+      width: 250px;
+      transition: 0.3s ease;
+    }
+
+    h1 {
+      color: #fff;
+      margin: 20px 0;
+    }
+
+    .buttons {
+      margin-top: 20px;
+    }
+
+    button {
+      padding: 10px 25px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      margin: 0 10px;
+      transition: 0.3s ease;
+    }
+
+    #yesBtn {
+      background-color: #ff4d88;
+      color: white;
+      font-size: 18px;
+    }
+
+    #noBtn {
+      background-color: white;
+      color: #ff4d88;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <img id="catGif" src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExN3dtem96bGJnOHQ3N21sODAwa21pd3F6djhvaWh1Zmt2dWs0aG4ybiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/QsomqbDcRm9xMFxJMu/giphy.gif">
+    <h1 id="text">Will you be my Valentine? 🤨</h1>
+
+    <div class="buttons">
+      <button id="yesBtn">Yes</button>
+      <button id="noBtn">No</button>
+    </div>
+  </div>
+
+  <script>
+    let yesBtn = document.getElementById("yesBtn");
+    let noBtn = document.getElementById("noBtn");
+    let catGif = document.getElementById("catGif");
+    let text = document.getElementById("text");
+
+    let size = 18;
+
+    noBtn.addEventListener("click", () => {
+      size += 8;
+      yesBtn.style.fontSize = size + "px";
+
+      catGif.src = "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExN3dtem96bGJnOHQ3N21sODAwa21pd3F6djhvaWh1Zmt2dWs0aG4ybiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/QsomqbDcRm9xMFxJMu/giphy.gif";
+      text.innerText = "Will you be my Valentine  :/  ( please ) ";
+    });
+
+    yesBtn.addEventListener("click", () => {
+      text.innerText = "YAY!!";
+      catGif.src = "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExcXN1cG9zM3NqNXI1ajU4Zmg1dnFiejRnOHFteTY0dzF1Mnd5OGx4ZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/d37mEpcaGP3pudPoho/giphy.gif";
+      noBtn.style.display = "none";
+      yesBtn.style.display = "none";
+    });
+  </script>
+
+</body>
+</html>  
